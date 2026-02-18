@@ -1,97 +1,153 @@
-<!DOCTYPE html>
-<html>
-  <head>
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centered Colorful Link</title>
-    <style>
-body, html {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    justify-content: center; /* Centers container horizontally */
-    align-items: center; /* Centers container vertically */
-    background-color: #f0f0f0;
-    font-family: sans-serif;
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+ <meta name="viewport"
+        content="width = device-width, initial-scale = 1.0, minimum-scale = 1, maximum-scale = 1, user-scalable = no" />
+    <meta name="apple-mobile-web-app-title" content="KBKJ HR" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+    <title>KBKJ HR</title>
+<style type="text/css">
+<!--
+body {
+	color:#000000;
+	background-color:#0072C6;
+	margin:0;
 }
 
-.container {
-    display: flex;
-    flex-wrap: wrap; /* Allows items to wrap to the next line */
-    justify-content: center; /* Centers the items within the container */
-    gap: 15px; /* Adds space between the link boxes */
-    max-width: 800px; /* Adjust as needed for layout */
-    padding: 20px;
+#container {
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	}
+
+a img {
+	border:none;
 }
 
-.link-box {
-    display: flex; /* Centers text inside the box */
-    justify-content: center;
-    align-items: center;
-    width: 120px; /* Fixed width for each box */
-    height: 80px; /* Fixed height for each box */
-    text-decoration: none; /* Removes underline from links */
-    color: black;
-    font-weight: bold;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
+-->
+</style>
+<script>
+function detectBrowser() {
+
+    let userAgent = navigator.userAgent;
+    let browserName;
+  
+    if (userAgent.match(/chrome|chromium|crios/i)) {
+      browserName = "Chrome";
+    } else if (userAgent.match(/firefox|fxios/i)) {
+      browserName = "Firefox";
+    } else if (userAgent.match(/safari/i)) {
+      browserName = "Safari";
+    } else if (userAgent.match(/opr\//i)) {
+      browserName = "Opera";
+    } else if (userAgent.match(/edg/i)) {
+      browserName = "Edge";
+    } else if (userAgent.match(/android/i)) {
+      browserName = "Android";
+    } else if (userAgent.match(/iphone/i)) {
+      browserName = "iPhone";
+    } else {
+      browserName = "Unknown";
+    }
+  
+    document.getElementById("detect").innerText =
+      "You are browsing with: " + browserName + "";
+  }
+
+function checkDevice(){
+
+         if (navigator.userAgent.match(/Android/i)
+         || navigator.userAgent.match(/webOS/i)
+         || navigator.userAgent.match(/iPhone/i)
+         || navigator.userAgent.match(/iPad/i)
+         || navigator.userAgent.match(/iPod/i)
+         || navigator.userAgent.match(/BlackBerry/i)
+         || navigator.userAgent.match(/Windows Phone/i)) {
+           //alert("mobile");
+		document.getElementById("btndesktop").style.display = 'none'
+		document.getElementById("btnslipdesktop").style.display = 'none'
+
+
+         } else {
+           //alert("not mobile");
+		document.getElementById("btnmobile").style.display = 'none'
+		document.getElementById("btnslipmobile").style.display = 'none'
+
+		
+         }
+         
+      
 }
 
-.link-box:hover {
-    transform: translateY(-5px); /* Adds a slight lift effect on hover */
-}
-
-
-    </style>
+ function myfunction() {
+         var answer = window.orientation > 1;
+         alert(answer ? 'It is a mobile device' : 'It is not a mobile device');
+      }
+</script>
 </head>
-<body>
-    <div" class="container">
-        <div class="link-box" style="background-color: #F54927;"> 
-  <a href="https://script.google.com/macros/s/AKfycby2pHp-QTn_Kh6blLROPo4-InBM-lkVj84VO-CfyDa0BFfl8mzAyP8yj8JCHifRbtH0/exec?br=2" class="link-box"  id="สาขา2" >สาขา 2</a>
-        </div>  
-        <div class="link-box" style="background-color: #33CFFF;"> 
-  <a href="https://script.google.com/macros/s/AKfycby2pHp-QTn_Kh6blLROPo4-InBM-lkVj84VO-CfyDa0BFfl8mzAyP8yj8JCHifRbtH0/exec?br=4" class="link-box"  id="สาขา4" >สาขา 4</a>
-        </div>  
-        <div class="link-box" style="background-color: #F5CF27;"> 
-  <a href="https://script.google.com/macros/s/AKfycby2pHp-QTn_Kh6blLROPo4-InBM-lkVj84VO-CfyDa0BFfl8mzAyP8yj8JCHifRbtH0/exec?br=5" class="link-box"  id="สาขา5" >สาขา 5</a>
-        </div>  
-        <div class="link-box" style="background-color: #FF33C5;"> 
-  <a href="https://script.google.com/macros/s/AKfycby2pHp-QTn_Kh6blLROPo4-InBM-lkVj84VO-CfyDa0BFfl8mzAyP8yj8JCHifRbtH0/exec?br=6" class="link-box"  id="สาขา6" >สาขา 6</a>
-        </div>  
-        <div class="link-box" style="background-color: #C533FF;"> 
-  <a href="https://script.google.com/macros/s/AKfycby2pHp-QTn_Kh6blLROPo4-InBM-lkVj84VO-CfyDa0BFfl8mzAyP8yj8JCHifRbtH0/exec?br=7" class="link-box"  id="สาขา7" >สาขา 7</a>
-        </div>  
-        <div class="link-box" style="background-color: #FFC533;"> 
-  <a href="https://script.google.com/macros/s/AKfycby2pHp-QTn_Kh6blLROPo4-InBM-lkVj84VO-CfyDa0BFfl8mzAyP8yj8JCHifRbtH0/exec?br=8" class="link-box"  id="สาขา8" >สาขา 8</a>
-        </div>  
-        <div class="link-box" style="background-color: #C480FF;"> 
-  <a href="https://script.google.com/macros/s/AKfycby2pHp-QTn_Kh6blLROPo4-InBM-lkVj84VO-CfyDa0BFfl8mzAyP8yj8JCHifRbtH0/exec?br=10" class="link-box"  id="สาขา10" >สาขา 10</a>
-        </div>  
-        <div class="link-box" style="background-color: #F5B427;"> 
-  <a href="https://script.google.com/macros/s/AKfycby2pHp-QTn_Kh6blLROPo4-InBM-lkVj84VO-CfyDa0BFfl8mzAyP8yj8JCHifRbtH0/exec?br=12" class="link-box"  id="สาขา12" >สาขา 12</a>
-        </div>  
-        <div class="link-box" style="background-color: #3357FF;"> 
-  <a href="https://script.google.com/macros/s/AKfycby2pHp-QTn_Kh6blLROPo4-InBM-lkVj84VO-CfyDa0BFfl8mzAyP8yj8JCHifRbtH0/exec?br=14" class="link-box"  id="สาขา14" >สาขา 14</a>
-        </div>  
-        <div class="link-box" style="background-color: #57FF33;"> 
-  <a href="https://script.google.com/macros/s/AKfycby2pHp-QTn_Kh6blLROPo4-InBM-lkVj84VO-CfyDa0BFfl8mzAyP8yj8JCHifRbtH0/exec?br=15" class="link-box"  id="สาขา15" >สาขา 15</a>
-        </div>  
-        <div class="link-box" style="background-color: #FF3357;"> 
-  <a href="https://script.google.com/macros/s/AKfycby2pHp-QTn_Kh6blLROPo4-InBM-lkVj84VO-CfyDa0BFfl8mzAyP8yj8JCHifRbtH0/exec?br=16" class="link-box"  id="สาขา16" >สาขา 16</a>
-        </div>  
-        <div class="link-box" style="background-color: #33C5FF;"> 
-  <a href="https://script.google.com/macros/s/AKfycby2pHp-QTn_Kh6blLROPo4-InBM-lkVj84VO-CfyDa0BFfl8mzAyP8yj8JCHifRbtH0/exec?br=23" class="link-box"  id="สาขา23" >สาขา 23</a>
-        </div>  
-        <div class="link-box" style="background-color: #C5FF33;"> 
-  <a href="https://script.google.com/macros/s/AKfycby2pHp-QTn_Kh6blLROPo4-InBM-lkVj84VO-CfyDa0BFfl8mzAyP8yj8JCHifRbtH0/exec?br=35" class="link-box"  id="สาขา35" >สาขา 35</a>
-        </div>  
-        <div class="link-box" style="background-color: #33FF57;"> 
-  <a href="https://script.google.com/macros/s/AKfycby2pHp-QTn_Kh6blLROPo4-InBM-lkVj84VO-CfyDa0BFfl8mzAyP8yj8JCHifRbtH0/exec?br=36" class="link-box"  id="สาขา36" >สาขา 36</a>
-        </div>  
-        <div class="link-box" style="background-color: #FF5733;"> 
-  <a href="https://script.google.com/macros/s/AKfycby2pHp-QTn_Kh6blLROPo4-InBM-lkVj84VO-CfyDa0BFfl8mzAyP8yj8JCHifRbtH0/exec?br=37" class="link-box"  id="สาขา37" >สาขา 37</a>
-        </div>  
+<body onload="checkDevice()">
+<!-- Image Map Generated by http://www.image-map.net/ -->
+<div id="detect" style="margin: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;"></div>
+<center>
+<h1 style="color:white">KBKJ HR Menu</h1>
+</center>
+ <div style="margin: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;">
+  <button id="btndesktop" width="190px" style="width: 50%;height: 45px;margin: 8px;" onclick = "window.location.href='49.0.87.66/WebTimeOnline/default1m.aspx';">ขออนุมัติการลา / Web Checkin-out </button>
+  <button id="btnmobile" width="190px" style="width: 80%;height: 45px;margin: 8px;" onclick = "window.location.href='49.0.87.66/WebTimeOnline/default1m.aspx';">ขออนุมัติการลา / Web Checkin-out</button>
+  <button id="btnslipdesktop" width="190px" style="width: 50%;height: 45px;margin: 8px;" disabled onclick = "window.location.href='49.0.87.66/WebTimeOnline/default1.aspx';">Slip ค่าตอบแทน / ใบหักภาษี Desktop Version</button>
+  <button id="btnslipmobile" width="190px" style="width: 80%;height: 45px;margin: 8px;" disabled onclick = "window.location.href='49.0.87.66/WebTimeOnline/default1m.aspx';">Slip ค่าตอบแทน / ใบหักภาษี Mobile Version</button>
+    
+  </div>
+ <div style="margin: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;">
+<button id="btndesktop" width="190px" style="width: 50%;height: 45px;margin: 8px;" onclick = "window.location.href='https://kbkjonline.com:7899/#/authen';">เพิ่มข้อมูลพนักงาน</button>
+  </div>
+ <div style="margin: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;">
+  <button id="btndesktop" width="190px" style="width: 50%;height: 45px;margin: 8px;" onclick = "window.location.href='49.0.87.66/Kbkj_doc/LoginForm.aspx';">ลงตารางเวรแพทย์ </button>
+  
+    
+  </div>
+ <div style="margin: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;">
+  <button id="btndesktop" width="190px" style="width: 50%;height: 45px;margin: 8px;" onclick = "window.location.href='49.0.87.66/salslip';">ดาวน์โหลดสลิบเงินเดือน</button>
+  
+    
+  </div>
 
-  </body>
+ <div style="margin: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;">
+  <button id="btndesktop" width="190px" style="width: 50%;height: 45px;margin: 8px;" onclick = "window.location.href='49.0.87.66/whtax';">ดาวน์โหลดเอกสารหักภาษี ณ ที่จ่าย</button>
+ </div>
+<button id="browse" style="display:none;" onclick="checkDevice()">Check</button>
+
+
+
+<!-- area  alt="" title="" href="49.0.87.66/WebSlip/WebLogin.aspx" shape="rect" coords="530,700,1295,873" style="outline:none;" target="_self"     / -->
+
+</map>
+</body>
 </html>
